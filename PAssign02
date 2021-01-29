@@ -1,0 +1,60 @@
+/* Programming Assignment 02
+ * Author: Jordan Sanchez
+ * Course: CSCI 1301
+ * Description: Calculate the weighted final grade for a class
+ */
+ 
+ import java.util.Scanner;
+
+public class PAssign02{
+
+     public static void main(String []args){
+         Scanner input = new Scanner(System.in);
+         
+         // Variables
+         double revel, lab, assign, exam1, exam2, exam3, finalE, finalGrade;
+         double revelW = .10, labW = .10, assignW = .10, exam1W = .15,
+                    exam2W = .15, exam3W = .15, finalEW = .25;
+         int count = 0;
+         
+         // User entered grades
+         System.out.print("Enter percent grade for Revel Exercises: ");
+         revel = nextDouble() * revelW;
+         count++;
+         
+         System.out.print("Enter percent grade for Lab Exercises: ");
+         lab = nextDouble() * labW;
+         count++;
+         
+         System.out.print("Enter percent grade for Programming Assignments: ");
+         assign = nextDouble() * assignW;
+         count++;
+         
+         System.out.print("Enter percent grade for Exam 1: ");
+         exam1 = nextDouble() * exam1W;
+         count++;
+         
+         System.out.print("Enter percent grade for Exam 2: ");
+         exam2 = nextDouble() * exam2W;
+         count++;
+         
+         System.out.print("Enter percent grade for Exam 3: ");
+         exam3 = nextDouble() * exam3W;
+         count++;
+         
+         System.out.print("Enter percent grade for Final Exam: ");
+         finalE = nextDouble() * finalEW;
+         count++;
+         
+         // Calculating final grade
+         finalGrade = revel + lab + assign + exam1 + exam2 + exam3 + finalE;
+         
+         // Display final grade and number of grades entered
+         System.out.println("There were " + count + " grades entered.");
+         System.out.println("The final grade for this course is " + finalGrade);
+         
+         
+         
+         
+     }
+}
